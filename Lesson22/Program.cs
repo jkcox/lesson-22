@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LoopsMethodsExceptionsArraysClasses
 {
@@ -67,8 +68,7 @@ namespace LoopsMethodsExceptionsArraysClasses
             // the result to a local variable named sum and
             // display the value of sum in console output
             var program = new Program();
-            //AddTwoNumbers isn't available on Program?
-            var sum = Program.MultiplyTwoNumbers(3, 4);
+            var sum = program.AddTwoNumbers(3, 4);
             Console.WriteLine(sum);
 
 
@@ -114,6 +114,10 @@ namespace LoopsMethodsExceptionsArraysClasses
             // commas, and row elements seperated with carriage returns.
 
             int[,] multiplicationTable = new int[4, 4];
+
+            for (int col = 0; col < multiplicationTable.GetLength(0); col++)
+                for (int row = 0; row < multiplicationTable.GetLength(1); row++)
+                    Console.WriteLine(multiplicationTable[col, row]);
 
 
 		}
