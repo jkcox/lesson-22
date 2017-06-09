@@ -105,23 +105,41 @@ namespace LoopsMethodsExceptionsArraysClasses
 			}
 
 
-            // Declare a two-dimensional array named multiplicationTable
-            // that contains 4 elements by 4 elements. Initialize it in
-            // a nested loop to contain elements that equal to the value
-            // that is the product of the two index values for
-            // each element. In a second nested loop, display the values
-            // in the console output, with column elements seperated with
-            // commas, and row elements seperated with carriage returns.
+			// Declare a two-dimensional array named multiplicationTable
+			// that contains 4 elements by 4 elements. Initialize it in
+			// a nested loop to contain elements that equal to the value
+			// that is the product of the two index values for
+			// each element. In a second nested loop, display the values
+			// in the console output, with column elements seperated with
+			// commas, and row elements seperated with carriage returns.
 
-            int[,] multiplicationTable = new int[4, 4];
-
-            for (int col = 0; col < multiplicationTable.GetLength(0); col++)
-            {
-                for (int row = 0; row < multiplicationTable.GetLength(1); row++) {
-					Console.WriteLine(multiplicationTable[col, row]);
-
+		
+				int[,] multiplicationTable = new int[4, 4];
+				for (int i = 0; i < 4; i++)
+				{
+					for (int j = 0; j < 4; j++)
+					{
+						// initializing
+						multiplicationTable[i, j] = i * j;
+					}
 				}
-            }
+				for (int i = 0; i < 4; i++)
+				{
+					for (int j = 0; j < 4; j++)
+					{
+						// log it
+						Console.Write(multiplicationTable[i, j] + ", ");
+					}
+				}
+
+				Console.ReadLine();
+
+				//   0 1 2 3
+				// 0 0 0 0 0 
+				// 1 0 1 2 3
+				// 2 0 2 4 6 
+				// 3 0 3 6 9
+			
 
 		}
 	}
