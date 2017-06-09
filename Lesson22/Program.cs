@@ -35,7 +35,7 @@ namespace LoopsMethodsExceptionsArraysClasses
 		// declared using the params keyword. The LoopOverParams method uses a
 		// foreach loop to iterate over the collection of values it receives
 		// and it displays the list of elements in the parameter.
-        public static void LoopOverParams(int[] x) {
+        public void LoopOverParams(int[] x) {
             foreach (var item in x)
             {
                 Console.WriteLine(item);
@@ -84,7 +84,7 @@ namespace LoopsMethodsExceptionsArraysClasses
             // Call the LoopOverParams instance method, passing in
             // three parameters with the values of 1, 2, and 3.
             int[] array = new int[] { 1, 2, 3 };
-            LoopOverParams(array);
+            program.LoopOverParams(array);
 
             // Call the method named DivideIntegers with the first
             // parameter set to 1, and second parameter set to 0.
@@ -116,9 +116,12 @@ namespace LoopsMethodsExceptionsArraysClasses
             int[,] multiplicationTable = new int[4, 4];
 
             for (int col = 0; col < multiplicationTable.GetLength(0); col++)
-                for (int row = 0; row < multiplicationTable.GetLength(1); row++)
-                    Console.WriteLine(multiplicationTable[col, row]);
+            {
+                for (int row = 0; row < multiplicationTable.GetLength(1); row++) {
+					Console.WriteLine(multiplicationTable[col, row]);
 
+				}
+            }
 
 		}
 	}
